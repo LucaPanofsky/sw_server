@@ -4,7 +4,7 @@
 
 Serve an `htmx-app` from a `service-worker`.
 
-Try it: https://lucapanofsky.github.io/sw_server/APP/home
+Try it: https://lucapanofsky.github.io/sw_server/
 
 ## dev
 
