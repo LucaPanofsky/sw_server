@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "shadow-cljs": "^2.22.1"
+  },
+  "scripts": {
+    "dev": "shadow-cljs watch app",
+    "release": "shadow-cljs release app"
+  }
+}

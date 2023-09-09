@@ -1,0 +1,33 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/app"
+  "src/test"]
+
+ :dependencies
+ [[binaryage/devtools "1.0.2"]
+  [metosin/reitit "0.6.0"]
+  [metosin/reitit-spec "0.6.0"]
+  [hiccups "0.3.0"]]
+
+ :dev-http
+ {8071 "docs"}
+
+ :builds
+ {:app
+  {:target :browser
+   :output-dir "docs"
+   :asset-path "."
+   :modules
+   {:shared
+    {:entries []}
+    :install
+    {:init-fn install.core/init
+     :depends-on #{:shared}}
+    :main
+    {:init-fn main.core/init
+     :depends-on #{:shared}}
+    :service-worker
+    {:init-fn service-worker.core/init
+     :depends-on #{:shared}
+     :web-worker true}}}}}

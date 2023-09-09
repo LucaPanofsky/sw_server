@@ -1,0 +1,4 @@
+(function(){
+'use strict';var Jf=function(){console.debug("Dispatching swRready");return document.getElementById("app-shell").dispatchEvent(new Event("swReady"))};console.debug("Init: install service worker");window.navigator.serviceWorker.addEventListener("controllerchange",function(){var a=localStorage.getItem("registration");return $APP.qa(a)?(localStorage.setItem("registration",!0),location.reload()):Jf()});window.navigator.serviceWorker.addEventListener("message",function(a){return console.log("MESSAGE FROM SW:",a)});
+navigator.serviceWorker.register(document.head.querySelector("[name\x3dservice-worker][content]").content).then(function(a){console.debug("reg result:",a);localStorage.setItem("registration",!0);return Jf()});
+}).call(this);

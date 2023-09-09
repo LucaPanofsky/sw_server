@@ -1,0 +1,9 @@
+.calva
+.clj-kondo
+.lsp
+.shadow-cljs
+node_modules
+docs/cljs-runtime
+
+
+
